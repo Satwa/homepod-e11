@@ -1,3 +1,12 @@
+header{
+  height: 60px;
+  padding: 10px;
+}
+
+.container{
+  margin: 0 200px;
+}
+
 nav {
   ul {
     display: flex;
@@ -6,7 +15,7 @@ nav {
       padding: 10px;
     }
     li:hover {
-      background-color: $text-color;
+      background-color: $text-color-dark;
       color: $background-color;
     }
   }

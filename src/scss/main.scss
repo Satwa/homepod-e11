@@ -1,9 +1,9 @@
 @import "_config.scss";
 
-@import "partials/header";
+@import "partials/_header";
 
 body {
   margin: 0;
   background-color: $background-color;
-  color: $text-color;
+  color: $text-color-dark;
 }

@@ -1,0 +1,22 @@
+header {
+  height: 60px;
+  padding: 10px; }
+
+.container {
+  margin: 0 200px; }
+
+nav ul {
+  display: flex; }
+  nav ul li {
+    list-style: none;
+    padding: 10px; }
+  nav ul li:hover {
+    background-color: #111;
+    color: #fff; }
+
+body {
+  margin: 0;
+  background-color: #fff;
+  color: #111; }
+
+/*# sourceMappingURL=main.css.map */
