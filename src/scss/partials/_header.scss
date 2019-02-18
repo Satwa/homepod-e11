@@ -1,6 +1,6 @@
+// Logo SVG pas transparent
 header {
   z-index: 10;
-  padding: 0 200px;
   position: fixed;
   top: 0; left: 0; right: 0;
   background: rgba(255, 255, 255, 0.9);
@@ -36,12 +36,14 @@ header {
       padding: 0 25px;
       a{
         color: $text-color-dark;
-        text-decoration: none
+        text-decoration: none;
+        font-size:.8rem;
       }
       a.active{
         color: $text-color-secondary-dark;
+        cursor: default;
       }
-      :hover a {
+      a:hover:not(.active) {
         color: $color-primary;
       }
     }

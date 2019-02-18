@@ -1,36 +1,59 @@
 const siriBlock = document.querySelector(".onSiri")
-var synth = window.speechSynthesis
-// https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak
 if(annyang){
+    let tellMeAbout = (name) => {
+        siriBlock.style.opacity = 1
+        console.log(name)
+        // Dans tous les cas c'est G.
+    }
+
+    let playAudio = (name) => {
+        console.log(window.location.origin + "/assets/audio/" + name + ".mp3")
+        let audio = new Audio(window.location.origin + "/assets/audio/" + name + ".mp3")
+        // audio.type = 'audio/mp3'
+
+        let play = audio.play()
+        
+
+        play.then(() => {
+            siriBlock.style.opacity = 1
+            annyang.pause()
+        }).catch((err) => console.log("Error happened:", err))
+        
+        audio.addEventListener("ended", () => {
+            siriBlock.style.opacity = 0
+            annyang.resume()
+        })
+    }
+
     let commands = {
         'dis siri': function(){
-            siriBlock.style.opacity = 1
-            console.log("Dis Siri")
-            // synth.speak("Bonjour")
+            playAudio("question")
+        },
+        'dis siri *text': (data) => {
+            console.log(data)
+            playAudio("watusay")
         },
         'bonjour': function(){
             siriBlock.style.opacity = 1
-            console.log("bonjour")
-            // synth.speak("Bonjour")
+            console.log("Bonjour") // DEBUG
         },
-        'bonjour quelle est la meteo du jour': function(){
+        '(dis siri) quelle est la météo (du jour)': function(){
             siriBlock.style.opacity = 1
             console.log("Meteo du jour")
-            // synth.speak("Bonjour")
         },
+        '(dis siri) parle moi de *name': tellMeAbout,
+        '(dis siri) qui est *name': tellMeAbout,
     }
-    
-    annyang.debug()
-    annyang.addCommands(commands)
 
+    annyang.addCommands(commands)
     annyang.setLanguage('fr-FR')
 
     annyang.addCallback('result', function(phrases) {
-        console.log("I think the user said: ", phrases[0]);
-        console.log("But then again, it could be any of the following: ", phrases);
+        console.log(phrases)
     })
 
-    annyang.start()
+    annyang.start({ autoRestart: true, continuous: false })
 }else{
     alert("DEBUG: La reconnaissance vocale n'est pas supportée")
+    // Ajouter un clickListener sur les phrases
 }
