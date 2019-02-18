@@ -1,16 +1,20 @@
+const siriBlock = document.querySelector(".onSiri")
 var synth = window.speechSynthesis
 // https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak
 if(annyang){
     let commands = {
         'dis siri': function(){
+            siriBlock.style.opacity = 1
             console.log("Dis Siri")
             // synth.speak("Bonjour")
         },
         'bonjour': function(){
+            siriBlock.style.opacity = 1
             console.log("bonjour")
             // synth.speak("Bonjour")
         },
         'bonjour quelle est la meteo du jour': function(){
+            siriBlock.style.opacity = 1
             console.log("Meteo du jour")
             // synth.speak("Bonjour")
         },
