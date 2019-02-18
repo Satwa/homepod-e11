@@ -32,5 +32,5 @@ if(annyang){
 
     annyang.start()
 }else{
-    alert("La reconnaissance vocale n'est pas supportée")
+    alert("DEBUG: La reconnaissance vocale n'est pas supportée")
 }

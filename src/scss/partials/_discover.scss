@@ -1,14 +1,21 @@
 .device{
     position: relative;
-    width: 100%;
     img{
-        height: 80%;
+        width: 100%
     }
     .onSiri{
         position: absolute;
         left:0;
-        height: 80%;
+        height: 100%;
         opacity: 0;
         transition: all .4s linear;
+    }
+}
+
+.questions{
+    h3.siriGradient{
+        background: -webkit-linear-gradient(45deg, #F0357C, #F154FF, #777DFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
