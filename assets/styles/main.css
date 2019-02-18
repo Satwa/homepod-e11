@@ -30,19 +30,43 @@ header {
         color: #0070c9; }
 
 body {
-  margin: 0;
+  margin: 0 0 80px 0;
   background-color: #fff;
   color: #111;
   font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px; }
 
 .container {
-  margin: 0 200px 100px 200px; }
+  margin: 0 200px 100px 200px;
+  display: flex; }
 
 .button-primary {
   background: #0070c9;
   color: #fff;
   padding: 12.5px 25px;
   border-radius: 4px; }
+
+h2 {
+  font-size: 4.706rem;
+  line-height: 4.941rem;
+  letter-spacing: -1.2px; }
+
+h3 {
+  font-size: 1.882rem;
+  line-height: 2.118rem;
+  letter-spacing: -.374px; }
+
+.primary-paragraph {
+  font-size: 1.353rem;
+  line-height: 1.824rem;
+  letter-spacing: .23px; }
+
+.secondary-paragraph {
+  font-size: 1rem;
+  line-height: 1.471rem;
+  letter-spacing: -.374px; }
+
+.device {
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */
