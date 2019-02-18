@@ -1,0 +1,13 @@
+nav {
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      padding: 10px;
+    }
+    li:hover {
+      background-color: $text-color;
+      color: $background-color;
+    }
+  }
+}

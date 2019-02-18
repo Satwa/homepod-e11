@@ -1,0 +1,9 @@
+@import "_config.scss";
+
+@import "partials/header";
+
+body {
+  margin: 0;
+  background-color: $background-color;
+  color: $text-color;
+}
