@@ -39,8 +39,10 @@ header {
       header ul li :hover a {
         color: #0070c9; }
 
-body {
-  margin: 0 0 80px 0;
+html, body {
+  margin: 100px 0 0 0;
+  height: 100%;
+  width: 100%;
   background-color: #fff;
   color: #111;
   font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -78,5 +80,11 @@ h3 {
 
 .device {
   position: relative; }
+  .device img {
+    height: 80%; }
+  .device .onSiri {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
 
 /*# sourceMappingURL=main.css.map */

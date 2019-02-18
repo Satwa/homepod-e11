@@ -1,4 +1,11 @@
 .device{
     position: relative;
-    
+    img{
+        height: 80%;
+    }
+    .onSiri{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
