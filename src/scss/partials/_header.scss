@@ -1,22 +1,51 @@
 header{
   height: 60px;
   padding: 10px;
-}
+  border-bottom: 1px solid $text-color-dark;
+  display: flex;
+  justify-content: space-between;
 
-.container{
-  margin: 0 200px;
-}
+  .logo{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    h1{
+      font-size: 1.42rem;
+      line-height: 40px;
+      margin-left: 25px;
+      font-weight: normal;
+    }
+    img{
+      height: 40px;
+      margin: 10px 0;
+      
+    }
+  }
 
-nav {
   ul {
     display: flex;
     li {
       list-style: none;
-      padding: 10px;
-    }
-    li:hover {
-      background-color: $text-color-dark;
-      color: $background-color;
+      padding: 0 25px;
+      a{
+        color: $text-color-dark;
+        text-decoration: none
+      }
+      a.active{
+        color: $text-color-secondary-dark;
+      }
+      :hover a {
+        color: $color-primary;
+      }
     }
   }
 }
+
+// h2 => fS 80px / 84px line-height / -1.2px letter-spacing
+// primaryParagraph => 23px / 31px lineHeight / 0.23px letter-spacing
+// h3 => 32px / 36px / 0.128px
+// secondaryParagraph => 17px / 25px / -.374px
+
+
+// letterSpacing -.374px
+// lineHeight 25px
