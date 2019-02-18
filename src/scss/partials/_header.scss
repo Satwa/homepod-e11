@@ -1,12 +1,20 @@
-header{
+header {
   height: 60px;
-  padding: 10px;
-  border-bottom: 1px solid $text-color-dark;
-  display: flex;
-  justify-content: space-between;
-
+  padding: 0 200px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  nav {
+    height: 60px;
+    padding: 12.5px 0;
+    border-bottom: 1px solid $text-color-dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .logo{
     display: flex;
+    align-items: center;
     color: black;
     text-decoration: none;
     h1{
@@ -17,13 +25,12 @@ header{
     }
     img{
       height: 40px;
-      margin: 10px 0;
-      
     }
   }
 
   ul {
     display: flex;
+    margin: 0;
     li {
       list-style: none;
       padding: 0 25px;
