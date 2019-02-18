@@ -1,43 +1,53 @@
 // https://offroadcode.com/rem-calculator/ [17px]
 html, body {
-	margin: 100px 0 0 0;
-	height: 100%;
-	width: 100%;
 	background-color: $background-color;
 	color: $text-color-dark;
 	font-family: $font-primary;
 	font-size: 17px;
 }
 
-.container{
-	margin: 0 200px 100px 200px;
-	display: flex;
-}
-
 .button-primary{
 	background: $color-primary;
 	color: $text-color-clear;
-	padding: 12.5px 25px; 
+	padding: 12.5px 25px;
 	border-radius: 4px;
+}
+
+h1, h2, h3, h4, p {
+	text-align: center;
 }
 
 h2{
 	font-size: 4.706rem;
 	line-height: 4.941rem;
 	letter-spacing: -1.2px;
+	margin: 0 0 50px 0;
 }
 h3{
 	font-size: 1.882rem;
-	line-height: 2.118rem;	
+	line-height: 2.118rem;
 	letter-spacing: -.374px;
+	margin: 0 0 25px 0;
+}
+h4 {
+	font-size: 1.882rem;
+	line-height: 2.118rem;
+	letter-spacing: 0.128px;
+	margin: 0 0 25px 0;
+}
+h2.light, h3.light, h4.light {
+	color: #fff;
+}
+p.light {
+	color: #fff;
 }
 
-.primary-paragraph{
+p.primary {
 	font-size: 1.353rem;
 	line-height: 1.824rem;
 	letter-spacing: .23px;
 }
-.secondary-paragraph{
+p.secondary {
 	font-size: 1rem;
 	line-height: 1.471rem;
 	letter-spacing: -.374px;

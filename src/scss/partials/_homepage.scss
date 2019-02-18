@@ -1,0 +1,10 @@
+.slider {
+  width: 100%;
+  &__container {
+    &__infoCard {
+      padding: 68px 45px;
+      border-radius: 20px;
+      background-color: $card-background;
+    }
+  }
+}
