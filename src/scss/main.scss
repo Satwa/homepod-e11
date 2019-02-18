@@ -1,22 +1,5 @@
 @import "_config.scss";
 
 @import "partials/_header";
-
-body {
-  margin: 0;
-  background-color: $background-color;
-  color: $text-color-dark;
-  font-family: $font-primary;
-  font-size: 17px;
-}
-
-.container{
-  margin: 0 200px 100px 200px;
-}
-
-.button-primary{
-  background: $color-primary;
-  color: $text-color-clear;
-  padding: 12.5px 25px; 
-  border-radius: 4px;
-}
+@import "partials/_global";
+@import "partials/_discover";
