@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HomePod - Présentation - Apple (FR)</title>
     <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="stylesheet" href="assets/simple-grid/simple-grid.min.css">
+    <link rel="stylesheet" href="assets/grid/materialize.min.css">
   </head>
   <body>
     <header id="header">
@@ -21,20 +21,24 @@
       </nav>
     </header>
     <div class="container">
-      <section>
-        <div class="box50">
+      <section class="row">
+        <div class="col s6 offset-s6">
           <h2>Il y a un nouveau son à la maison.</h2>
-          <div class="slider flexSpaceAround">
-            <button class="arrow" id="arrow-left"><</button>
+          <div class="slider">
+            <a class="arrow" id="arrow-left">
+              <img src="assets/images/icons/arrow.svg" alt="arrow right">
+            </a>
             <div class="slider__container">
               <div class="slider__container__infoCard">
-                <h4 class="light">Des basses profondes qui emplissent l’espace.</h4>
+                <h3 class="light">Des basses profondes qui emplissent l’espace.</h3>
                 <p class="light">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
               </div>
             </div>
-            <button class="arrow" id="arrow-right">></button>
+            <a class="arrow" id="arrow-right">
+              <img src="assets/images/icons/arrow.svg" alt="arrow right">
+            </a>
           </div>
         </div>
       </section>

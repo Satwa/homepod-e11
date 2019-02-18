@@ -3,7 +3,6 @@ html, body {
 	background-color: $background-color;
 	color: $text-color-dark;
 	font-family: $font-primary;
-	font-size: 17px;
 }
 
 section {
@@ -22,20 +21,14 @@ h1, h2, h3, h4, p {
 }
 
 h2{
-	font-size: 4.706rem;
-	line-height: 4.941rem;
-	letter-spacing: -1.2px;
+	font-size: 4.571rem;
+	line-height: 1.0625;
+	letter-spacing: -.009rem;
 	margin: 0 0 50px 0;
 }
-h3{
-	font-size: 1.882rem;
-	line-height: 2.118rem;
-	letter-spacing: -.374px;
-	margin: 0 0 25px 0;
-}
-h4 {
-	font-size: 1.882rem;
-	line-height: 2.118rem;
+h3 {
+	font-size: 2.286rem;
+	line-height: 2.571rem;
 	letter-spacing: 0.128px;
 	margin: 0 0 25px 0;
 }

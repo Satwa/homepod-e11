@@ -1,5 +1,18 @@
 .slider {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  #arrow-left {
+    transform: rotate(180deg);
+  }
+  .arrow {
+    cursor: pointer;
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
   &__container {
     &__infoCard {
       padding: 68px 45px;
