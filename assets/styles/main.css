@@ -87,4 +87,23 @@ h3 {
     left: 50%;
     transform: translateX(-50%); }
 
+section {
+  margin-top: 100px; }
+
+.flexSpaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.box50 {
+  width: 50%; }
+
+.box100 {
+  width: 100%; }
+
 /*# sourceMappingURL=main.css.map */
