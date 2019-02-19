@@ -4,20 +4,21 @@ const colors = document.querySelectorAll(".colorSelection")
 colors.forEach((color) => {
     color.addEventListener("click", function(e){
         e.preventDefault()
-        console.log("Triggered")
         let selected = this.getAttribute("data-color")
-        // homepod.classList.remove(".active")
-        homepod.forEach((elm) => {
-            if(elm.id == selected){
-                /*
-                TODO:
-                    - Ajouter classe active
-                    - Déplacer l'autre & hover
+        let allActive = document.querySelectorAll(".colorSelection.active")
 
-                    - Si re-clique => on remet à la position de base
-                    - Si on clique pendant que sélectionné, on inverse (z-index
-                */
+        if(allActive.length > 0) allActive[0].classList.remove("active")
+
+
+        homepod.forEach((elm) => {
+            elm.classList.remove("active")
+            elm.classList.remove("back")
+            
+            if(elm.id == selected){
+                color.classList.add("active")
                 elm.classList.add("active")
+            }else{
+                elm.classList.add("back")
             }
         })
     })

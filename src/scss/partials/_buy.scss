@@ -24,10 +24,26 @@
         transition: all .3s linear;
         margin-bottom: 50px;
     }
+    .homepod.right.back{
+        transform: translateX(-25%);
+        opacity: .5;
+        z-index: -10;
+    }
+    .homepod.left.back{
+        transform: translateX(25%);
+        opacity: .5;
+        z-index: -10;
+    }
     .homepod.right.active{
         transform: translateX(-50%);
+        opacity: 1;
+        z-index: 10;
+        position: relative;
     }
     .homepod.left.active{
         transform: translateX(50%);
+        opacity: 1;
+        z-index: 10;
+        position: relative;
     }
 }
