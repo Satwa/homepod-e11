@@ -89,13 +89,22 @@
   &__control.playing {
     background: url('../images/icons/pause.svg') center 100% no-repeat;
   }
+  #hello_siri {
+    opacity: 0;
+    position: absolute;
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 95.5%;
+    transition: opacity 0.1s;
+  }
 }
 
 
-section.entryAnim {
+.entryAnim {
   opacity: 0;
   transition: opacity 0.2s;
 }
-section.entryAnim.opened {
+.entryAnim.opened {
   opacity: 1;
 }

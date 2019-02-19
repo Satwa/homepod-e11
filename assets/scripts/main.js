@@ -7,7 +7,10 @@ const body = document.querySelector('body'),
       homepod_container = html.querySelector('.homepod-container'),
       space_recognition_video_control = html.querySelector('.video_container__control')
       space_recognition_video = html.querySelector('#space_recognition'),
-      video_position = document.querySelector('.video_container').offsetTop - clientHeight/2
+      video_position = document.querySelector('.video_container').offsetTop - clientHeight/2,
+      hello_container = body.querySelector("#hello_container"),
+      hello_homepod = body.querySelector('#hello_homepod'),
+      hello_siri = body.querySelector('#hello_siri')
 
 // Slider variables
 const slider = document.querySelector(".slider"),
@@ -22,6 +25,7 @@ let pos = 0,
 // Global event listener
 updateScrollPosition()
 setInfoCardWidth()
+
 window.onscroll = function(){
   updateScrollPosition()
 }
@@ -46,6 +50,10 @@ function updateScrollPosition() {
       sectionsToAnim = document.querySelectorAll('.entryAnim:not(.opened)')
     }
   }
+  let videoPos = (scroll - (hello_container.offsetTop - clientHeight*2/3))/100
+  console.log(videoPos)
+  hello_homepod.currentTime = (videoPos > 0) ? 5 - videoPos : 5
+  hello_siri.style.opacity = (videoPos > 5) ? 1 : 0
 }
 function getScrollPosition() {
   scrollBody = body.scrollTop
