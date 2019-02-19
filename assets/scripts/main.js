@@ -51,8 +51,9 @@ function videoAutolaunch(scroll) {
 }
 function entryAnimations(scroll){
   for (var i = 0; i < sectionsToAnim.length; i++) {
-    if (sectionsToAnim[i].offsetTop - clientHeight/2 < scroll) {
+    if (sectionsToAnim[i].offsetTop - clientHeight*2/3 < scroll) {
       sectionsToAnim[i].classList.add('opened')
+      i -= 1
       sectionsToAnim = document.querySelectorAll('.entryAnim:not(.opened)')
     }
   }

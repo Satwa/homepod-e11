@@ -3,6 +3,8 @@ html, body {
 	color: $text-color-dark;
 	font-family: $font-primary;
 	margin: 0;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 section, footer {
