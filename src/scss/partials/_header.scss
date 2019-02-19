@@ -43,7 +43,7 @@ header {
         color: $text-color-secondary-dark;
         cursor: default;
       }
-      a:hover:not(.active) {
+      a:hover:not(.active):not(.cta) {
         color: $color-primary;
       }
     }
