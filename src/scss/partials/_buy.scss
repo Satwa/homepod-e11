@@ -71,3 +71,11 @@
     border-color: $color-primary;
     color: $color-primary;
 }
+p.secondary{
+    a.cta-secondary{
+        font-size: 1rem;
+    }
+}
+a.button-primary#buy{
+    text-decoration: none;
+}
