@@ -68,6 +68,37 @@
   }
 }
 
+// Music animation
+.music_container {
+	text-align: right;
+  position: relative;
+}
+.albumCovers {
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  top: -50px;
+  left: 100px;
+  bottom: -50px;
+  z-index: -1;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  img:nth-child(3n) {
+    transition: all 0.3s;
+  }
+  img:nth-child(3n+1) {
+    transition: all 0.3s linear 0.15s;
+  }
+  img:nth-child(3n+2) {
+    transition: all 0.3s linear 0.30s;
+  }
+}
+
 // Vidéo
 video {
   width: 100%;
@@ -98,4 +129,8 @@ video {
 }
 .entryAnim.opened {
   opacity: 1;
+}
+.entryAnim.opened .albumCovers img {
+  opacity: 1;
+  transform: translate(0px);
 }
