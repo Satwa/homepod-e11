@@ -5,12 +5,12 @@ let isAlreadyPlaying = false
 let playAudio = (name) => {
     let audio = document.querySelector("#audio-" + name)
     let play = audio.play()
-    
-    play.then(() => {
+    console.log(name)
+    play.then( () => {
         siriBlock.style.opacity = 1
         if(annyang) annyang.pause()
     }).catch((err) => console.log("Error happened:", err))
-    
+
     audio.addEventListener("ended", () => {
         isAlreadyPlaying = false
         siriBlock.style.opacity = 0
@@ -59,7 +59,8 @@ if(annyang){
     questions.forEach((question) => {
         question.addEventListener("click", function(e) {
             if(!isAlreadyPlaying){
-                playAudio(this.getAttribute("data-sentence"))
+              playAudio("question")
+                // playAudio(this.getAttribute("data-sentence"))
             }
         })
     })
