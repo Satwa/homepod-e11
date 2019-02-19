@@ -9,7 +9,7 @@ html, body {
 	margin: 0;
 }
 
-section {
+section, footer {
 	margin-top: 100px;
 }
 
@@ -62,4 +62,5 @@ a.cta-secondary{
 	color: $color-primary;
 	text-align:center;
 	display:block;
+	text-decoration: none;
 }

@@ -1,0 +1,25 @@
+footer {
+  background: $background-grey;
+  padding-bottom: 25px;
+  .footerList.col {
+    list-style-type: none;
+    margin: 25px 0;
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+      font-size: 0.647rem;
+      line-height: 1.36364;
+    }
+    li:first-child {
+      color: $text-color-dark;
+      font-weight: bold;
+    }
+    li a {
+      text-decoration: none;
+      color: $text-footer-color;
+    }
+    li a:hover {
+      text-decoration: underline;
+    }
+  }
+}
