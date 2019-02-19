@@ -546,6 +546,9 @@
     left: auto;
     right: auto;
   }
+  .row .col.offset-l0 {
+    margin-left: auto;
+  }
   .row .col.offset-l1 {
     margin-left: 8.3333333333%;
   }

@@ -70,22 +70,23 @@
 
 // Music animation
 .music_container {
-	text-align: right;
+	text-align: center;
   position: relative;
 }
 .albumCovers {
   display: flex;
   flex-flow: column wrap;
+  justify-content: space-around;
   position: absolute;
-  top: -50px;
-  left: 100px;
-  bottom: -50px;
+  top: 0px;
+  left: -50vw;
+  bottom: 0px;
   z-index: -1;
   img {
     width: 100px;
     height: 100px;
-    margin: 10px;
     opacity: 0;
+    margin: 10px;
     transform: translateX(25px);
   }
   img:nth-child(3n) {
@@ -96,6 +97,16 @@
   }
   img:nth-child(3n+2) {
     transition: all 0.3s linear 0.30s;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .music_container {
+    text-align: right;
+  }
+  .albumCovers {
+    top: -50px;
+    left: 100px;
+    bottom: -50px;
   }
 }
 
