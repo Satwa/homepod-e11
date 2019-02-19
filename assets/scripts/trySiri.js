@@ -2,11 +2,14 @@ const siriBlock = document.querySelector(".onSiri")
 let isAlreadyPlaying = false
 
 
+// Getting some DOMException while triggering play with no user action
+// FIX: User has to perfom at least one action
 let playAudio = (name) => {
     let audio = document.querySelector("#audio-" + name)
     let play = audio.play()
-    console.log(name)
+
     play.then( () => {
+        isAlreadyPlaying = true
         siriBlock.style.opacity = 1
         if(annyang) annyang.pause()
     }).catch((err) => console.log("Error happened:", err))
@@ -19,10 +22,13 @@ let playAudio = (name) => {
 }
 
 if(annyang){
-    let tellMeAbout = (name) => {
-        siriBlock.style.opacity = 1
+    let tellMeAbout = (name) => { // In case we want to build a real assistant
+        playAudio("secret")
         console.log(name)
-        // Dans tous les cas c'est G.
+    }
+
+    let tellWeather = (city) => { // In case we want to build a real assistant
+        playAudio("weather")
     }
 
     let commands = {
@@ -33,15 +39,24 @@ if(annyang){
             console.log(data)
             playAudio("watusay")
         },
-        'bonjour': function(){
-            siriBlock.style.opacity = 1
-            console.log("Bonjour") // DEBUG
+        'bonjour': function(){ // DEBUG
+            console.log("Bonjour")
             playAudio("question")
         },
-        '(dis siri) quelle est la météo (du jour)': function(){
-            siriBlock.style.opacity = 1
-            console.log("Meteo du jour")
+        '(dis siri) joue ma musique': function(){
+            playAudio("music")
         },
+        '(dis siri) reprends ma musique': function(){
+            playAudio("music")
+        },
+        '(dis siri) quelle est la météo (du jour)': tellWeather,
+        '(dis siri) quelle est la météo (d\'aujourd\'hui)': tellWeather,
+        '(dis siri) quelle est la météo (à *city)': tellWeather,
+        '(dis siri) quelle est la météo (de *city)': tellWeather,
+        '(dis siri) quelle est la météo (prévue)': tellWeather,
+        '(dis siri) quelle est la météo (prévue à *city)': tellWeather,
+        '(dis siri) quelle est la météo (prévue aujourd\'hui)': tellWeather,
+        '(dis siri) quelle est la météo (prévue aujourd\'hui à *city)': tellWeather,
         '(dis siri) parle moi de *name': tellMeAbout,
         '(dis siri) qui est *name': tellMeAbout,
     }
@@ -54,14 +69,15 @@ if(annyang){
     })
 
     annyang.start({ autoRestart: true, continuous: false })
-}else{
-    const questions = document.querySelectorAll(".siriGradient")
-    questions.forEach((question) => {
-        question.addEventListener("click", function(e) {
-            if(!isAlreadyPlaying){
-              playAudio("question")
-                // playAudio(this.getAttribute("data-sentence"))
-            }
-        })
-    })
 }
+
+// Adding clickListener
+const questions = document.querySelectorAll(".siriGradient")
+questions.forEach((question) => {
+    question.addEventListener("click", function(e) {
+        if(!isAlreadyPlaying){
+            // playAudio("question") // DEBUG
+            playAudio(this.getAttribute("data-sentence"))
+        }
+    })
+})
