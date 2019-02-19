@@ -1,6 +1,7 @@
 const siriBlock = document.querySelector(".onSiri")
 let isAlreadyPlaying = false
 
+
 let playAudio = (name) => {
     console.log(window.location.origin + "/assets/audio/" + name + ".mp3")
     let audio = new Audio(window.location.origin + "/assets/audio/" + name + ".mp3")

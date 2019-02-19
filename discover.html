@@ -20,9 +20,8 @@
         </ul>
       </nav>
     </header>
-    <!-- Fix CTA acheter => ne doit pas devenir bleu au survol -->
     <section class="container">
-        <div class="row">
+        <div class="row valign-wrapper h100">
             <div class="col s12 m6 device">
                 <img src="assets/images/homepod-w-siri.jpg" alt="Siri écoute" class="onSiri">
                 <img src="assets/images/homepod-without-siri.jpg" alt="HomePod">
@@ -33,6 +32,13 @@
                 <h3 class="siriGradient" data-sentence="weather">Dis Siri, quelle est la météo du jour ?</h3>
                 <h3 class="siriGradient" data-sentence="music">Dis Siri, joue ma musique.</h3>
                 <h3 class="siriGradient" data-sentence="secret">Dis Siri, qui est Emmanuel Macron ?</h3>
+                <div class="audioSources">
+                    <audio data-sentence="weather" src=""></audio>
+                    <audio data-sentence="music"   src=""></audio>
+                    <audio data-sentence="secret"  src=""></audio>
+                    <audio data-sentence="watusay"  src="assets/audio/watusay.mp3"></audio>
+                    <audio data-sentence="question"  src="assets/audio/question.mp3"></audio>
+                </div>
             </div>
         </div>
     </section>
