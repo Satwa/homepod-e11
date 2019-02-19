@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>HomePod - Découvrir Siri - Apple (FR)</title>
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/grid/materialize.min.css">
-  </head>
-  <body>
+</head>
+<body>
     <header id="header" class="row">
-      <nav class="col s12 m8 offset-m2">
-        <a class="logo" href="index.html" title="Retour à l'accueil">
-            <img src="assets/images/logos/apple.svg" alt="Logo">
-            <h1>HomePod</h1>
-        </a>
-        <ul id="rightMenu">
-            <li><a href="index.html" title="Présentation">Présentation</a></li>
-            <li><a href="discover.html" title="Découvrir Siri" class="active">Découvrir Siri</a></li>
-            <li><a href="buy.html" title="Découvrir Siri" class="cta button-primary">Acheter</a></li>
-        </ul>
-      </nav>
+        <nav class="col s12 m8 offset-m2">
+            <a class="logo" href="index.html" title="Retour à l'accueil">
+                <img src="assets/images/logos/apple.svg" alt="Logo">
+                <h1>HomePod</h1>
+            </a>
+            <ul id="rightMenu">
+                <li><a href="index.html" title="Présentation">Présentation</a></li>
+                <li><a href="discover.html" title="Découvrir Siri" class="active">Découvrir Siri</a></li>
+                <li><a href="buy.html" title="Découvrir Siri" class="cta button-primary">Acheter</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="container">
         <div class="row valign-wrapper h100">
@@ -28,23 +28,52 @@
             </div>
             <div class="col s12 m6 questions">
                 <h2>Que puis-je faire pour vous&nbsp;?</h2>
-
+                
                 <h3 class="siriGradient" data-sentence="weather">Dis Siri, quelle est la météo du jour ?</h3>
                 <h3 class="siriGradient" data-sentence="music">Dis Siri, joue ma musique.</h3>
                 <h3 class="siriGradient" data-sentence="secret">Dis Siri, qui est Emmanuel Macron ?</h3>
                 <div class="audioSources">
-                    <audio data-sentence="weather" src=""></audio>
-                    <audio data-sentence="music"   src=""></audio>
-                    <audio data-sentence="secret"  src=""></audio>
-                    <audio data-sentence="watusay"  src="assets/audio/watusay.mp3"></audio>
-                    <audio data-sentence="question"  src="assets/audio/question.mp3"></audio>
+                    <audio id="audio-weather" preload="auto" src=""></audio>
+                    <audio id="audio-music"   preload="auto" src=""></audio>
+                    <audio id="audio-secret"  preload="auto" src=""></audio>
+                    <audio id="audio-watusay"  preload="auto" src="assets/audio/watusay.mp3"></audio>
+                    <audio id="audio-question"  preload="auto" src="assets/audio/question.mp3"></audio>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer id="footer"></footer>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <ul class="footerList col s4">
+                    <li>S'informer et acheter</li>
+                    <li><a href="index.html">Présentation du produit</a></li>
+                    <li><a href="tech.html">Caractéristiques techniques</a></li>
+                    <li><a href="discover.html">Découvrir Siri</a></li>
+                    <li><a href="buy.html">Acheter le homepod</a></li>
+                    <li><a href="http://apple.fr">Site Apple</a></li>
+                </ul>
+                <ul class="footerList col s4">
+                    <li>S'informer et acheter</li>
+                    <li><a href="index.html">Présentation du produit</a></li>
+                    <li><a href="tech.html">Caractéristiques techniques</a></li>
+                    <li><a href="discover.html">Découvrir Siri</a></li>
+                    <li><a href="buy.html">Acheter le homepod</a></li>
+                    <li><a href="http://apple.fr">Site Apple</a></li>
+                </ul>
+                <ul class="footerList col s4">
+                    <li>S'informer et acheter</li>
+                    <li><a href="index.html">Présentation du produit</a></li>
+                    <li><a href="tech.html">Caractéristiques techniques</a></li>
+                    <li><a href="discover.html">Découvrir Siri</a></li>
+                    <li><a href="buy.html">Acheter le homepod</a></li>
+                    <li><a href="http://apple.fr">Site Apple</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script src="assets/scripts/trySiri.min.js"></script>
-  </body>
+</body>
 </html>

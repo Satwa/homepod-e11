@@ -3,22 +3,18 @@ let isAlreadyPlaying = false
 
 
 let playAudio = (name) => {
-    console.log(window.location.origin + "/assets/audio/" + name + ".mp3")
-    let audio = new Audio(window.location.origin + "/assets/audio/" + name + ".mp3")
-    // audio.type = 'audio/mp3'
-
+    let audio = document.querySelector("#audio-" + name)
     let play = audio.play()
     
-
     play.then(() => {
         siriBlock.style.opacity = 1
-        annyang.pause()
+        if(annyang) annyang.pause()
     }).catch((err) => console.log("Error happened:", err))
     
     audio.addEventListener("ended", () => {
         isAlreadyPlaying = false
         siriBlock.style.opacity = 0
-        annyang.resume()
+        if(annyang) annyang.resume()
     })
 }
 
@@ -40,6 +36,7 @@ if(annyang){
         'bonjour': function(){
             siriBlock.style.opacity = 1
             console.log("Bonjour") // DEBUG
+            playAudio("question")
         },
         '(dis siri) quelle est la météo (du jour)': function(){
             siriBlock.style.opacity = 1
@@ -61,13 +58,9 @@ if(annyang){
     const questions = document.querySelectorAll(".siriGradient")
     questions.forEach((question) => {
         question.addEventListener("click", function(e) {
-            // Disable * questions
-            // Play audio
             if(!isAlreadyPlaying){
-                playAudio("watusay")
+                playAudio(this.getAttribute("data-sentence"))
             }
         })
     })
-    // alert("DEBUG: La reconnaissance vocale n'est pas supportée")
-    // Ajouter un clickListener sur les phrases
 }
