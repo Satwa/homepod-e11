@@ -1,5 +1,6 @@
 .homepod-container {
   position: relative;
+  z-index: -1;
   img {
     position: absolute;
     top: 50px;
@@ -65,4 +66,8 @@
       opacity: 1;
     }
   }
+}
+
+video {
+  width: 100%;
 }
