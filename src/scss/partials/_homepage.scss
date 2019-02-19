@@ -90,3 +90,12 @@
     background: url('../images/icons/pause.svg') center 100% no-repeat;
   }
 }
+
+
+section.entryAnim {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+section.entryAnim.opened {
+  opacity: 1;
+}
