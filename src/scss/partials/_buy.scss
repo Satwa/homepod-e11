@@ -47,3 +47,26 @@
         position: relative;
     }
 }
+
+.addCarePlan{
+    color: $text-color-dark;
+    border: 1px solid $card-background;
+    border-radius: 4px;
+    background: white;
+    padding: 25px 50px;
+    margin: 0 auto;
+    max-width: 300px;
+    cursor: pointer;
+
+    p{
+        text-align: left;
+        span.subtitle{
+            display:block;
+            font-weight: bold;
+        }
+    }
+}
+.addCarePlan.active{
+    border-color: $color-primary;
+    color: $color-primary;
+}
