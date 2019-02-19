@@ -1,0 +1,33 @@
+.colors{
+    div{
+        text-align: center;
+        img{
+            width: 100%;
+            max-width: 350px;
+        }
+        .colorSelection{
+            text-align: center;
+            text-decoration: none;
+            color: $text-color-dark;
+            border: 1px solid $card-background;
+            border-radius: 4px;
+            background: white;
+            padding: 25px 50px;
+        }
+        .colorSelection.active{
+            border-color: $color-primary;
+            color: $color-primary;
+        }
+    }
+
+    .homepod{
+        transition: all .3s linear;
+        margin-bottom: 50px;
+    }
+    .homepod.right.active{
+        transform: translateX(-50%);
+    }
+    .homepod.left.active{
+        transform: translateX(50%);
+    }
+}

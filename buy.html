@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>HomePod - Découvrir Siri - Apple (FR)</title>
+    <title>Acheter un HomePod - Apple (FR)</title>
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/grid/materialize.min.css">
 </head>
@@ -21,23 +21,18 @@
         </nav>
     </header>
     <section class="container">
-        <div class="row valign-wrapper h100">
-            <div class="col s12 m6 device">
-                <img src="assets/images/homepod-w-siri.jpg" alt="Siri écoute" class="onSiri">
-                <img src="assets/images/homepod-without-siri.jpg" alt="HomePod">
-            </div>
-            <div class="col s12 m6 questions">
-                <h2>Que puis-je faire pour vous&nbsp;?</h2>
-                
-                <h3 class="siriGradient" data-sentence="weather">Dis Siri, quelle est la météo du jour ?</h3>
-                <h3 class="siriGradient" data-sentence="music">Dis Siri, joue ma musique.</h3>
-                <h3 class="siriGradient" data-sentence="secret">Dis Siri, qui est Emmanuel Macron ?</h3>
-                <div class="audioSources">
-                    <audio id="audio-weather" preload="auto" src=""></audio>
-                    <audio id="audio-music"   preload="auto" src=""></audio>
-                    <audio id="audio-secret"  preload="auto" src=""></audio>
-                    <audio id="audio-watusay"  preload="auto" src="assets/audio/watusay.mp3"></audio>
-                    <audio id="audio-question"  preload="auto" src="assets/audio/question.mp3"></audio>
+        <div class="row">
+            <div class="col m12">
+                <h2>Acheter un HomePod</h2>
+                <div class="container colors">
+                    <div class="col s6">
+                        <img src="assets/images/homepod/homepod-spacegray.png" alt="HomePod Gris sidéral" class="homepod left" id="spacegray">
+                        <a href="#" class="colorSelection" data-color="spacegray">Gris&nbsp;sidéral</a>
+                    </div>
+                    <div class="col s6">
+                        <img src="assets/images/homepod/homepod-white.png" alt="HomePod Blanc" class="homepod right" id="white">
+                        <a href="#" class="colorSelection" data-color="white">Blanc</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,7 +68,6 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script src="assets/scripts/trySiri.js"></script>
+    <script src="assets/scripts/buy.js"></script>
 </body>
 </html>
