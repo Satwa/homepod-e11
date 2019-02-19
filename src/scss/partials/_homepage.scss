@@ -46,6 +46,8 @@
     display: flex;
     transition: left .25s linear;
     height: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
     &__infoCard {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
       background: white;
@@ -55,8 +57,8 @@
       box-sizing: border-box;
       padding: 68px 45px;
       border-radius: 20px;
-      // background-color: $card-background;
       opacity: 0;
+      overflow-y: auto;
       transition: opacity 0.3s linear;
     }
     &__infoCard.card-focused {
