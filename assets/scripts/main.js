@@ -8,7 +8,8 @@ const body = document.querySelector('body'),
       space_recognition_video_control = html.querySelector('.video_container__control')
       space_recognition_video = html.querySelector('#space_recognition'),
       video_position = document.querySelector('.video_container').offsetTop - clientHeight/2,
-      hello_siri = body.querySelector('#hello_siri')
+      hello_siri = body.querySelector('#hello_siri'),
+      at_home = body.querySelector('#at-home')
 
 // Slider variables
 const slider = document.querySelector(".slider"),
@@ -38,23 +39,39 @@ window.addEventListener('resize',function(){
 function updateScrollPosition() {
   const scroll = getScrollPosition()
   homepod_container.style.top = -scroll*0.3 + "px"
-  videoAutolaunch(scroll)
+  //videoAutolaunch(scroll)
   entryAnimations(scroll)
+  homepodAtHome(scroll)
   // Hello Siri animation
   hello_siri.currentTime = (scroll - (hello_siri.offsetTop - clientHeight*2/3))/100
 }
-function videoAutolaunch(scroll) {
-  if (space_recognition_video.paused && video_position < scroll && !video_already_played ) {
-    video_already_played = true;
-    playVideo()
-  }
-}
+// function videoAutolaunch(scroll) {
+//   if (space_recognition_video.paused && video_position < scroll && !video_already_played ) {
+//     video_already_played = true;
+//     playVideo()
+//   }
+// }
 function entryAnimations(scroll){
   for (var i = 0; i < sectionsToAnim.length; i++) {
     if (sectionsToAnim[i].offsetTop - clientHeight*2/3 < scroll) {
       sectionsToAnim[i].classList.add('opened')
       i -= 1
       sectionsToAnim = document.querySelectorAll('.entryAnim:not(.opened)')
+    }
+  }
+}
+function homepodAtHome(scroll) {
+  let top = (at_home.offsetTop - clientHeight)
+  console.log(scroll)
+  console.log("at_home.offsetTop - clientHeight : "+ top )
+  if (top < scroll) {
+    let opacity =  (scroll - top)/at_home.offsetHeight
+    console.log('Update opacity : '+ opacity )
+    at_home.style.opacity = opacity
+    if (opacity > 1) {
+      at_home.classList.add('animationEnded')
+    } else {
+      at_home.classList.remove('animationEnded')
     }
   }
 }
