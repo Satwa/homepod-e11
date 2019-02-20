@@ -4,7 +4,7 @@ let video_already_played = false,
     sectionsToAnim = document.querySelectorAll('.entryAnim:not(.opened)')
 const body = document.querySelector('body'),
       html = document.querySelector('html'),
-      homepod_container = html.querySelector('.homepod-container'),
+      homepod_container = html.querySelector('.homepodContainer'),
       space_recognition_video_control = html.querySelector('.video_container__control')
       space_recognition_video = html.querySelector('#space_recognition'),
       hello_siri = body.querySelector('#hello_siri'),
@@ -112,13 +112,13 @@ arrow_right.addEventListener('click',function(e){
 
 function move() {
   // Gestion affichage image homepod
-  document.querySelector('#homepod-state-'+pos).classList.add('homepod-focused')
+  document.querySelector('#homepod-state-'+pos).classList.add('homepodContainer__homepodFocused')
   // gestion animation opacité card
   document.querySelector('.card-focused').classList.toggle('card-focused')
   slides[pos].classList.add('card-focused')
   // gestion slide
   slider__container.style.left = -(slide_width * pos)+"px";
   setTimeout(function(){
-    document.querySelector('.homepod-focused:not(#homepod-state-'+pos+')').classList.toggle('homepod-focused')
+    document.querySelector('.homepodContainer__homepodFocused:not(#homepod-state-'+pos+')').classList.toggle('homepodContainer__homepodFocused')
   },300)
 }

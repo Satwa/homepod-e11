@@ -1,7 +1,7 @@
-.highlight-col {
+.highlightCol {
   margin: 75px auto;
 }
-.homepod-container {
+.homepodContainer {
   position: relative;
   z-index: -1;
   img {
@@ -12,7 +12,7 @@
     opacity: 0;
     transition: opacity 0.3s linear;
   }
-  img.homepod-focused {
+  img.homepodContainer__homepodFocused {
     opacity: 1;
   }
 }
