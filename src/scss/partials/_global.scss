@@ -5,10 +5,11 @@ html, body {
 	margin: 0;
 	width: 100%;
 	overflow-x: hidden;
+	font-size: 14px;
 }
 
 section {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .button-primary {
@@ -29,8 +30,8 @@ h1, h2, h3, h4, p {
 }
 
 h2{
-	font-size: 4.571rem;
-	line-height: 1.0625;
+	font-size: 2.286rem;
+	line-height: 2.571rem;
 	letter-spacing: -.009rem;
 	margin: 0 0 25px 0;
 }
@@ -82,7 +83,18 @@ a.cta-secondary{
 	height: 100%;
 }
 
+.row .col.s0 {
+	padding: 0;
+	width: 0%;
+	overflow: hidden
+}
+
 @media only screen and (min-width: 993px) {
+	.l0 {
+		padding: 0;
+		width: 0%;
+		overflow: hidden
+	}
 	.valign-wrapper {
 		display: flex;
 		align-items: center;
@@ -90,5 +102,17 @@ a.cta-secondary{
 	}
 	.h100{
 		height: calc(100vh - 100px);
+	}
+	section {
+		margin-top: 100px;
+	}
+}
+@media only screen and (min-width: 601px) {
+	html, body {
+		font-size: 17px;
+	}
+	h2 {
+		font-size: 4.571rem;
+		line-height: 1.0625;
 	}
 }

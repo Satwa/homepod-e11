@@ -17,6 +17,7 @@
     h3.siriGradient{
         background: -webkit-linear-gradient(45deg, #F0357C, #F154FF, #777DFF);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor: pointer;
     }
