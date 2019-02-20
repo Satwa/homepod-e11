@@ -44,6 +44,9 @@
       height: 44px;
     }
   }
+  &__container.transitionEnabled {
+    transition: left .25s linear;
+  }
   &__container {
     position: absolute;
     z-index: 8;
@@ -51,7 +54,6 @@
     top: 0;
     display: flex;
     align-items: center;
-    transition: left .25s linear;
     height: 100%;
     padding: 10px 0;
     box-sizing: border-box;

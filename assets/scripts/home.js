@@ -100,13 +100,33 @@ function setInfoCardWidth() {
 
 arrow_left.addEventListener('click',function(e){
   e.preventDefault()
-  pos = (pos-1+slidesCounter)%slidesCounter
-  move()
+  if (pos-1 < 0) {
+    slider__container.style.transition = "top 0s"
+    slider__container.style.left = -(slide_width * slidesCounter)+"px"
+    setTimeout(function(){
+      slider__container.style.transition = "left .25s linear"
+      pos = (pos-1+slidesCounter)%slidesCounter
+      move()
+    },5)
+  } else {
+    pos = (pos-1+slidesCounter)%slidesCounter
+    move()
+  }
 });
 arrow_right.addEventListener('click',function(e){
   e.preventDefault()
-  pos = (pos+1)%slidesCounter
-  move()
+  if (pos+1 >= slidesCounter) {
+    slider__container.style.transition = "top 0s"
+    slider__container.style.left = slide_width+"px"
+    setTimeout(function(){
+      slider__container.style.transition = "left .25s linear"
+      pos = (pos+1)%slidesCounter
+      move()
+    },5)
+  } else {
+    pos = (pos+1)%slidesCounter
+    move()
+  }
 });
 
 function move() {
