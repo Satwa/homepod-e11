@@ -29,7 +29,7 @@ let playAudio = (name) => {
 
 if(annyang){
     let tellMeAbout = (name) => { // In case we want to build a real assistant
-        playAudio("secret")
+        playAudio("mpuget")
         console.log(name)
     }
 
@@ -38,7 +38,7 @@ if(annyang){
     }
 
     let tellPodcast = (name) => { // In case we want to build a real assistant
-        playAudio("podcast")
+        playAudio("parlonsdesign")
     }
 
     let commands = {
@@ -59,10 +59,10 @@ if(annyang){
         '(dis siri) reprends ma musique': function(){
             playAudio("music")
         },
-        '(dis siri) joue le dernier épisode de *name': tellPodcast, 
-        '(dis siri) reprend l\'épisode de *name': tellPodcast, 
-        '(dis siri) reprend la lecture de *name': tellPodcast, 
-        '(dis siri) joue mon épisode de *name': tellPodcast, 
+        '(dis siri) joue le dernier épisode de *name': tellPodcast,
+        '(dis siri) reprend l\'épisode de *name': tellPodcast,
+        '(dis siri) reprend la lecture de *name': tellPodcast,
+        '(dis siri) joue mon épisode de *name': tellPodcast,
         '(dis siri) quelle est la météo (du jour)': tellWeather,
         '(dis siri) quelle est la météo (d\'aujourd\'hui)': tellWeather,
         '(dis siri) quelle est la météo (à *city)': tellWeather,
