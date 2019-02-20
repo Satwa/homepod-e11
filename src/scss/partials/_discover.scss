@@ -37,4 +37,13 @@
     align-items: center;
     transition: all .3s;
     overflow: hidden;
+    &__list {
+  		font-size: 1.353rem;
+  		line-height: 1.824rem;
+  		letter-spacing: .23px;
+      margin: 0;
+      li {
+        margin: 10px 0;
+      }
+  	}
 }
