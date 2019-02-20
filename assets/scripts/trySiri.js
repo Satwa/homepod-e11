@@ -45,15 +45,14 @@ if(annyang){
         'dis siri': function(){
             playAudio("question")
         },
-        'dis siri *text': (data) => {
-            console.log(data)
-            playAudio("watusay")
-        },
         'bonjour': function(){ // DEBUG
             console.log("Bonjour")
             playAudio("question")
         },
         '(dis siri) joue ma musique': function(){
+            playAudio("music")
+        },
+        '(dis siri) jouer ma musique': function(){
             playAudio("music")
         },
         '(dis siri) reprends ma musique': function(){
@@ -73,6 +72,10 @@ if(annyang){
         '(dis siri) quelle est la météo (prévue aujourd\'hui à *city)': tellWeather,
         '(dis siri) parle moi de *name': tellMeAbout,
         '(dis siri) qui est *name': tellMeAbout,
+        'dis siri *text': (data) => {
+            console.log(data)
+            playAudio("watusay")
+        },
     }
 
     annyang.addCommands(commands)
