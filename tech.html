@@ -21,14 +21,21 @@
   <header id="header">
     <nav class="container">
       <a class="logo" href="index.html" title="Retour à l'accueil">
-          <img src="assets/images/logos/apple.svg" alt="Logo">
-          <h1>HomePod</h1>
+        <img src="assets/images/logos/apple.svg" alt="Logo">
+        <h1>HomePod</h1>
       </a>
-      <ul id="rightMenu">
-          <li><a href="index.html" title="Présentation">Présentation</a></li>
+      <div id="rightMenu">
+        <div class="hamburger hamburger--squeeze hide_for_desktop" id="mobileMenu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </div>
+        <ul>
+          <li><a href="index.html" title="Présentation" class="active">Présentation</a></li>
           <li><a href="discover.html" title="Découvrir Siri">Découvrir Siri</a></li>
           <li><a href="buy.html" title="Acheter le HomePod" class="cta button-primary">Acheter</a></li>
-      </ul>
+        </ul>
+      </div>
     </nav>
   </header>
     <div class="container">
@@ -47,126 +54,114 @@
                 </div>
             </div>
         </section>
-
-        <section class="row">
-          <div class="col s12">
-            <div class="row">
-              <div class="col s12 m6 l4 techCard">
-                <h3>Dimensions, poids et coloris</h3>
-                <ul class="techCard__list">
-                  <li>Dimensions :</li>
-                  <li>172mm de hauteur</li>
-                  <li>142mm de diamètre</li>
-                </ul>
-                <ul class="techCard__list">
-                  <li>Poids :</li>
-                  <li>2,5kg</li>
-                </ul>
-                <ul class="techCard__list">
-                  <li>Coloris :</li>
-                  <li>Gris sidéral</li>
-                  <li>Blanc</li>
-                </ul>
-              </div>
-              <div class="col s12 m6 l4 techCard">
-                <h3>Sources audio</h3>
-                <ul class="techCard__list">
-                  <li>Apple Music</li>
-                  <li>Achats de musique sur iTunes</li>
-                  <li>Bibliothèque musicale iCloud avec un</li>
-                  <li>abonnement Apple Music ou iTunes Match</li>
-                  <li>Radio Beats 1 en direct</li>
-                  <li>Épisodes live de Beats 1 à la demande</li>
-                  <li>Podcasts Apple</li>
-                </ul>
-              </div>
-              <div class="col s12 m6 l4 techCard">
-                <h3>Formats audio</h3>
-                <ul class="techCard__list">
-                  <li>HE‑AAC (V1), AAC (16 à 320 kbit/s)</li>
-                  <li>AAC protégé (iTunes Store)</li>
-                  <li>MP3 (16 à 320 kbit/s)</li>
-                  <li>MP3 VBR</li>
-                  <li>Apple Lossless</li>
-                  <li>AIFF, WAV</li>
-                  <li>FLAC</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m8 l6 techCard">
-                <h3>Technologie audio</h3>
-                <ul class="techCard__list">
-                  <li>Boomer longue portée avec amplificateur spécifique</li>
-                  <li>Sept tweeters à pavillon, chacun ayant son propre amplificateur spécifique</li>
-                  <li>Ensemble de six micros pour s’adresser de loin à Siri</li>
-                  <li>Micro interne de calibration des fréquences basses pour une correction automatique des graves</li>
-                  <li>Formation de faisceaux pour le son direct et ambiant</li>
-                  <li>Traitement dynamique transparent digne d’un studio professionnel</li>
-                  <li>Compatible avec l’appairage stéréo</li>
-                </ul>
-              </div>
-              <div class="col s12 m6 l4 techCard">
-                <h3>Sans-fil</h3>
-                <ul class="techCard__list">
-                  <li>Wi‑Fi 802.11ac avec MIMO</li>
-                  <li>Accès invité direct3</li>
-                  <li>Bluetooth 5.0</li>
-                  <li>Prise en charge des enceintes dans plusieurs pièces avec AirPlay</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 m6 l4 techCard">
-                <h3>Accessibilité</h3>
-                <ul class="techCard__list">
-                  <li>Fonctionnalités incluses :</li>
-                  <li>Adaptation aux pressions</li>
-                  <li>Siri</li>
-                  <li>VoiceOver</li>
-                  <li>App Maison et HomeKit</li>
-                </ul>
-              </div>
-              <div class="col s12 m8 l6 techCard">
-                <h3>Surface touch</h3>
-                <ul class="techCard__list">
-                  <li>Toucher ou appuyer sur les boutons + et – pour augmenter ou réduire le volume</li>
-                  <li>Toucher de façon prolongée pour s’adresser à Siri</li>
-                  <li>Toucher pour lire/mettre en pause la musique ou s’adresser à Siri</li>
-                  <li>Toucher deux fois pour sauter un morceau</li>
-                  <li>Toucher trois fois pour revenir en arrière</li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12 l6 techCard">
-                <h3>Alimentation et conditions ambiantes</h3>
-                <ul class="techCard__list">
-                  <li>Bloc d’alimentation intégré</li>
-                  <li>Tension : de 100 à 240 V CA</li>
-                  <li>Fréquence : de 50 à 60 Hz</li>
-                  <li>Température d’utilisation : de 0 à 35 °C</li>
-                  <li>Température de rangement : de -20 à 45 °C</li>
-                  <li>Humidité relative : de 5 à 90 % sans condensation</li>
-                  <li>Altitude maximale d’utilisation : testé jusqu’à 3 000 m</li>
-                  <li>Altitude maximale de rangement : 4 500 m</li>
-                  <li>Altitude maximale de transport : 10 500 m</li>
-                </ul>
-              </div>
-              <div class="col s12 l6 techCard">
-                <h3>Configuration requise</h3>
-                <ul class="techCard__list">
-                  <li>iPhone 5s (ou modèle ultérieur), iPad Pro,</li>
-                  <li>iPad (5e génération ou ultérieure), iPad Air (ou modèle ultérieur),</li>
-                  <li>iPad mini 2 (ou modèle ultérieur) ou iPod touch (6e génération) avec iOS 12 (ou version ultérieure)</li>
-                  <li>Accès Internet par Wi‑Fi 802.11</li>
-                  <li>Abonnement Apple Music requis pour bénéficier de l’ensemble des fonctionnalités musicales</li>
-                </ul>
-              </div>
-            </div>
+        <section class="flexRow">
+          <div class="col s12 m6 l4 techCard">
+            <h3>Dimensions, poids et coloris</h3>
+            <ul class="techCard__list">
+              <li>Dimensions :</li>
+              <li>172mm de hauteur</li>
+              <li>142mm de diamètre</li>
+            </ul>
+            <ul class="techCard__list">
+              <li>Poids :</li>
+              <li>2,5kg</li>
+            </ul>
+            <ul class="techCard__list">
+              <li>Coloris :</li>
+              <li>Gris sidéral</li>
+              <li>Blanc</li>
+            </ul>
+          </div>
+          <div class="col s12 m6 l4 techCard">
+            <h3>Sources audio</h3>
+            <ul class="techCard__list">
+              <li>Apple Music</li>
+              <li>Achats de musique sur iTunes</li>
+              <li>Bibliothèque musicale iCloud avec un</li>
+              <li>abonnement Apple Music ou iTunes Match</li>
+              <li>Radio Beats 1 en direct</li>
+              <li>Épisodes live de Beats 1 à la demande</li>
+              <li>Podcasts Apple</li>
+            </ul>
+          </div>
+          <div class="col s12 m6 l4 techCard">
+            <h3>Formats audio</h3>
+            <ul class="techCard__list">
+              <li>HE‑AAC (V1), AAC (16 à 320 kbit/s)</li>
+              <li>AAC protégé (iTunes Store)</li>
+              <li>MP3 (16 à 320 kbit/s)</li>
+              <li>MP3 VBR</li>
+              <li>Apple Lossless</li>
+              <li>AIFF, WAV</li>
+              <li>FLAC</li>
+            </ul>
+          </div>
+          <div class="col s12 m8 l6 techCard">
+            <h3>Technologie audio</h3>
+            <ul class="techCard__list">
+              <li>Boomer longue portée avec amplificateur spécifique</li>
+              <li>Sept tweeters à pavillon, chacun ayant son propre amplificateur spécifique</li>
+              <li>Ensemble de six micros pour s’adresser de loin à Siri</li>
+              <li>Micro interne de calibration des fréquences basses pour une correction automatique des graves</li>
+              <li>Formation de faisceaux pour le son direct et ambiant</li>
+              <li>Traitement dynamique transparent digne d’un studio professionnel</li>
+              <li>Compatible avec l’appairage stéréo</li>
+            </ul>
+          </div>
+          <div class="col s12 m6 l4 techCard">
+            <h3>Sans-fil</h3>
+            <ul class="techCard__list">
+              <li>Wi‑Fi 802.11ac avec MIMO</li>
+              <li>Accès invité direct3</li>
+              <li>Bluetooth 5.0</li>
+              <li>Prise en charge des enceintes dans plusieurs pièces avec AirPlay</li>
+            </ul>
+          </div>
+          <div class="col s12 m6 l4 techCard">
+            <h3>Accessibilité</h3>
+            <ul class="techCard__list">
+              <li>Fonctionnalités incluses :</li>
+              <li>Adaptation aux pressions</li>
+              <li>Siri</li>
+              <li>VoiceOver</li>
+              <li>App Maison et HomeKit</li>
+            </ul>
+          </div>
+          <div class="col s12 m8 l6 techCard">
+            <h3>Surface touch</h3>
+            <ul class="techCard__list">
+              <li>Toucher ou appuyer sur les boutons + et – pour augmenter ou réduire le volume</li>
+              <li>Toucher de façon prolongée pour s’adresser à Siri</li>
+              <li>Toucher pour lire/mettre en pause la musique ou s’adresser à Siri</li>
+              <li>Toucher deux fois pour sauter un morceau</li>
+              <li>Toucher trois fois pour revenir en arrière</li>
+            </ul>
+          </div>
+          <div class="col s12 l6 techCard">
+            <h3>Alimentation et conditions ambiantes</h3>
+            <ul class="techCard__list">
+              <li>Bloc d’alimentation intégré</li>
+              <li>Tension : de 100 à 240 V CA</li>
+              <li>Fréquence : de 50 à 60 Hz</li>
+              <li>Température d’utilisation : de 0 à 35 °C</li>
+              <li>Température de rangement : de -20 à 45 °C</li>
+              <li>Humidité relative : de 5 à 90 % sans condensation</li>
+              <li>Altitude maximale d’utilisation : testé jusqu’à 3 000 m</li>
+              <li>Altitude maximale de rangement : 4 500 m</li>
+              <li>Altitude maximale de transport : 10 500 m</li>
+            </ul>
+          </div>
+          <div class="col s12 l6 techCard">
+            <h3>Configuration requise</h3>
+            <ul class="techCard__list">
+              <li>iPhone 5s (ou modèle ultérieur), iPad Pro,</li>
+              <li>iPad (5e génération ou ultérieure), iPad Air (ou modèle ultérieur),</li>
+              <li>iPad mini 2 (ou modèle ultérieur) ou iPod touch (6e génération) avec iOS 12 (ou version ultérieure)</li>
+              <li>Accès Internet par Wi‑Fi 802.11</li>
+              <li>Abonnement Apple Music requis pour bénéficier de l’ensemble des fonctionnalités musicales</li>
+            </ul>
           </div>
         </section>
-
     </div>
 
     <footer>
