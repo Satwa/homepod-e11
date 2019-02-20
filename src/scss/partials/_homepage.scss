@@ -81,7 +81,7 @@
   justify-content: space-around;
   position: absolute;
   top: 0px;
-  left: -20vw;
+  left: -35vw;
   bottom: 0px;
   z-index: -1;
   img {
@@ -135,6 +135,7 @@ video {
   background-size: contain;
   background-attachment: fixed;
   opacity: 0;
+  margin-top: 50px;
 }
 #at-home.animationEnded {
   background-attachment: local;
@@ -197,5 +198,13 @@ h2.highlightText {
   }
   .highlightCol {
     margin: 75px auto;
+  }
+  #at-home {
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 993px) {
+  .row .col.s6.music_container {
+    margin: 0 25%;
   }
 }
