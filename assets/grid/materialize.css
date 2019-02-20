@@ -62,6 +62,12 @@
   position: relative;
 }
 
+.row .col.s0 {
+	padding: 0;
+	width: 0%;
+	overflow: hidden
+}
+
 .row .col.s1 {
   width: 8.3333333333%;
   margin-left: auto;
@@ -474,6 +480,11 @@
 }
 
 @media only screen and (min-width: 993px) {
+  .row .col.l0 {
+		padding: 0;
+		width: 0%;
+		overflow: hidden
+	}
   .row .col.l1 {
     width: 8.3333333333%;
     margin-left: auto;
@@ -509,6 +520,7 @@
     margin-left: auto;
     left: auto;
     right: auto;
+    overflow: visible;
   }
   .row .col.l7 {
     width: 58.3333333333%;

@@ -72,6 +72,8 @@ function getScrollPosition() {
 
 // Gestion vidéo
 space_recognition_video.onPlay = playVideo()
+space_recognition_video.onended = pauseVideo
+
 space_recognition_video_control.addEventListener('click',function(e){
   e.preventDefault()
   space_recognition_video.paused ? playVideo() : pauseVideo()
