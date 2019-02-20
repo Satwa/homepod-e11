@@ -14,11 +14,11 @@ gulp.task("watch", function() {
     gulp.watch(['src/scss/**/*.scss', 'src/scss/*.scss'], gulp.series('sass'))
 
     const server = http.createServer((request, response) => {
-        return handler(request, response);
+        return handler(request, response)
       })
        
       server.listen(5000, () => {
-        console.log('Running at http://localhost:5000');
+        console.log('Running at http://localhost:5000')
       })
 })
 
