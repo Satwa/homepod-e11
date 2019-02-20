@@ -1,11 +1,14 @@
+.highlight-col {
+  margin: 75px auto;
+}
 .homepod-container {
   position: relative;
   z-index: -1;
   img {
     position: absolute;
-    top: 50px;
-    right: 0;
-    width: 40vw;
+    top: 0;
+    right: 50px;
+    width: 100%;
     opacity: 0;
     transition: opacity 0.3s linear;
   }
@@ -45,16 +48,14 @@
     left: 0;
     top: 0;
     display: flex;
+    align-items: center;
     transition: left .25s linear;
     height: 100%;
     padding: 10px 0;
     box-sizing: border-box;
     &__infoCard {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
-      background: white;
       width: calc(40.08vw - 88px - 1.5rem);
       margin: 0 44px;
-      height: 100%;
       box-sizing: border-box;
       padding: 68px 45px;
       border-radius: 20px;
@@ -134,7 +135,32 @@ video {
   }
 }
 
+// At Home
+#at-home {
+  width: 100%;
+  height: 51vw;
+  position: relative;
+  background: url('../images/at_home/homepod_at_home.jpg');
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0;
+}
+#at-home.animationEnded {
+  background-attachment: local;
+}
 
+// End CTA
+.cta-block {
+	background-color: #000;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Animation d'entrée
 .entryAnim {
   opacity: 0;
   transition: opacity 0.2s;
