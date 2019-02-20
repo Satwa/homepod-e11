@@ -54,11 +54,8 @@ function entryAnimations(scroll){
 }
 function homepodAtHome(scroll) {
   let top = (at_home.offsetTop - clientHeight)
-  console.log(scroll)
-  console.log("at_home.offsetTop - clientHeight : "+ top )
   if (top < scroll) {
     let opacity =  (scroll - top)/at_home.offsetHeight
-    console.log('Update opacity : '+ opacity )
     at_home.style.opacity = opacity
     if (opacity > 1) {
       at_home.classList.add('animationEnded')
@@ -119,6 +116,9 @@ function move() {
   // gestion slide
   slider__container.style.left = -(slide_width * pos)+"px";
   setTimeout(function(){
-    document.querySelector('.homepodContainer__homepodFocused:not(#homepod-state-'+pos+')').classList.toggle('homepodContainer__homepodFocused')
+    let focused = document.querySelector('.homepodContainer__homepodFocused:not(#homepod-state-'+pos+')')
+    if (focused != null) {
+      focused.classList.toggle('homepodContainer__homepodFocused')
+    }
   },300)
 }
