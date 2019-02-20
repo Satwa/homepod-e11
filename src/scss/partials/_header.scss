@@ -30,10 +30,12 @@ header {
 
   ul {
     display: flex;
+    align-items: center;
     margin: 0;
     li {
       list-style: none;
       padding: 0 25px;
+      text-align: center;
       a{
         color: $text-color-dark;
         text-decoration: none;
