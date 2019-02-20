@@ -158,6 +158,19 @@ video {
   justify-content: center;
   align-items: center;
 }
+h2.highlightText {
+  background-image: linear-gradient(to left, #777dff 0%, #f154ff 30%, #f0357c 100%),linear-gradient(to right, #777dff 0%, #497ce2 30%, #37bdde 100%);
+  background-size: 150% 150%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMovement 4s ease infinite;
+}
+
+@keyframes gradientMovement {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
 
 // Animation d'entrée
 .entryAnim {
