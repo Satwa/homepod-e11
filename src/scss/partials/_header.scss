@@ -35,17 +35,22 @@ header {
   }
   ul.is-active{
     opacity: 1;
+    top: 0vh;
   }
   ul {
     opacity: 0;
-    display: flex;
-    transition: all .3s;
+    transition: opacity .3s, top .3s;
     align-items: center;
     margin: 0;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    left:0; right: 0; top:0; bottom: 0; background: $background-color;
+    left:0; right: 0;
+    z-index: -1;
+    top: -100vh;
+    height: 100vh;
+    background: $background-color;
     li {
       list-style: none;
       padding: 25px 0;
@@ -75,6 +80,7 @@ header {
     position: static;
     flex-direction: row;
     background: transparent;
+    height: auto;
     li {
       list-style: none;
       padding: 0 25px;
