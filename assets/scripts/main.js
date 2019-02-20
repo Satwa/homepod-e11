@@ -1,12 +1,8 @@
 // Hamburger menu
-document.querySelector("#mobileMenu").addEventListener("click", function(){
-  let menu = document.querySelector("#rightMenu ul")
-  if(this.classList.contains("is-active")){
-    menu.style.opacity = 0
-    menu.style.bottom = "-100%"
-  }else{
-    menu.style.bottom = 0
-    menu.style.opacity = 1   
-  }
+const menu = document.querySelector("#rightMenu ul")
+let previousWidth = 0
+
+document.querySelector("#mobileMenu").addEventListener("click", function(){00
   this.classList.toggle("is-active")
+  menu.classList.toggle("is-active")
 })
