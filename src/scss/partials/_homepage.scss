@@ -139,11 +139,10 @@ video {
 #at-home {
   width: 100%;
   height: 51vw;
-  position: relative;
   background: url('../images/at_home/homepod_at_home.jpg');
   background-position: bottom;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   opacity: 0;
 }
 #at-home.animationEnded {
