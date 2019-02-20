@@ -1,9 +1,15 @@
 const siriBlock = document.querySelector(".onSiri")
 let isAlreadyPlaying = false
 
+document.querySelector("#startRecognition").addEventListener("click", function(e){
+    e.preventDefault()
+    this.parentNode.style.top = "-200%"
+    this.parentNode.style.opacity = 0
+    setTimeout(function(){
+        document.querySelector(".popupContainer").style.display = "none"
+    }, 300)
+})
 
-// Getting some DOMException while triggering play with no user action
-// FIX: User has to perfom at least one action
 let playAudio = (name) => {
     let audio = document.querySelector("#audio-" + name)
     let play = audio.play()
