@@ -7,7 +7,6 @@ const body = document.querySelector('body'),
       homepod_container = html.querySelector('.homepod-container'),
       space_recognition_video_control = html.querySelector('.video_container__control')
       space_recognition_video = html.querySelector('#space_recognition'),
-      video_position = document.querySelector('.video_container').offsetTop - clientHeight/2,
       hello_siri = body.querySelector('#hello_siri'),
       at_home = body.querySelector('#at-home')
 
@@ -39,18 +38,11 @@ window.addEventListener('resize',function(){
 function updateScrollPosition() {
   const scroll = getScrollPosition()
   homepod_container.style.top = -scroll*0.3 + "px"
-  //videoAutolaunch(scroll)
   entryAnimations(scroll)
   homepodAtHome(scroll)
   // Hello Siri animation
   hello_siri.currentTime = (scroll - (hello_siri.offsetTop - clientHeight*2/3))/100
 }
-// function videoAutolaunch(scroll) {
-//   if (space_recognition_video.paused && video_position < scroll && !video_already_played ) {
-//     video_already_played = true;
-//     playVideo()
-//   }
-// }
 function entryAnimations(scroll){
   for (var i = 0; i < sectionsToAnim.length; i++) {
     if (sectionsToAnim[i].offsetTop - clientHeight*2/3 < scroll) {
@@ -82,6 +74,7 @@ function getScrollPosition() {
 }
 
 // Gestion vidéo
+space_recognition_video.onPlay = playVideo()
 space_recognition_video_control.addEventListener('click',function(e){
   e.preventDefault()
   space_recognition_video.paused ? playVideo() : pauseVideo()
