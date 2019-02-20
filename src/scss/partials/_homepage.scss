@@ -1,5 +1,5 @@
 .highlightCol {
-  margin: 75px auto;
+  margin: 75px auto 25px auto;
 }
 .homepodContainer {
   position: relative;
@@ -81,7 +81,7 @@
   justify-content: space-around;
   position: absolute;
   top: 0px;
-  left: -50vw;
+  left: -20vw;
   bottom: 0px;
   z-index: -1;
   img {
@@ -194,5 +194,8 @@ h2.highlightText {
   }
   .slider__container__infoCard {
     padding: 68px 45px;
+  }
+  .highlightCol {
+    margin: 75px auto;
   }
 }

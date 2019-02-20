@@ -9,7 +9,7 @@ html, body {
 }
 
 section {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 .button-primary {
@@ -83,9 +83,17 @@ a.cta-secondary{
 	height: 100%;
 }
 
+.row .col.s0 {
+	padding: 0;
+	width: 0%;
+	overflow: hidden
+}
+
 @media only screen and (min-width: 993px) {
-	html, body {
-		font-size: 17px;
+	.l0 {
+		padding: 0;
+		width: 0%;
+		overflow: hidden
 	}
 	.valign-wrapper {
 		display: flex;
@@ -95,8 +103,14 @@ a.cta-secondary{
 	.h100{
 		height: calc(100vh - 100px);
 	}
+	section {
+		margin-top: 100px;
+	}
 }
 @media only screen and (min-width: 601px) {
+	html, body {
+		font-size: 17px;
+	}
 	h2 {
 		font-size: 4.571rem;
 		line-height: 1.0625;
