@@ -20,28 +20,28 @@
         }
     }
 
-    .homepod{
+    .homepod img{
         transition: all .3s linear;
         margin-bottom: 50px;
     }
-    .homepod.right.back{
-        transform: translateX(-50%) scale(.8);
+    .homepod.right.back img{
+        transform: translateX(-40%) scale(.8);
         opacity: .5;
         z-index: -10;
     }
-    .homepod.left.back{
-        transform: translateX(50%) scale(.8);
+    .homepod.left.back img{
+        transform: translateX(40%) scale(.8);
         opacity: .5;
         z-index: -10;
     }
-    .homepod.right.active{
-        transform: translateX(-50%);
+    .homepod.right.active img{
+        transform: translateX(-40%);
         opacity: 1;
         z-index: 10;
         position: relative;
     }
-    .homepod.left.active{
-        transform: translateX(50%);
+    .homepod.left.active img{
+        transform: translateX(40%);
         opacity: 1;
         z-index: 10;
         position: relative;
@@ -66,7 +66,7 @@
             font-weight: bold;
         }
     }
-    
+
     p.gray-details{
         color: $text-footer-color;
         font-size: .8rem;
