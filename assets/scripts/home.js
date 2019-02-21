@@ -2,10 +2,12 @@
 let video_already_played = false,
     clientHeight = document.documentElement.clientHeight,
     sectionsToAnim = document.querySelectorAll('.entryAnim:not(.opened)')
+var space_recognition_video_control,
+    space_recognition_video,
+    hello_siri
 const body = document.querySelector('body'),
     html = document.querySelector('html'),
     homepod_container = html.querySelector('.homepodContainer'),
-    hello_siri = body.querySelector('#hello_siri'),
     at_home = body.querySelector('#at-home')
 
 // Slider variables
@@ -39,7 +41,9 @@ function updateScrollPosition() {
     entryAnimations(scroll)
     homepodAtHome(scroll)
     // Hello Siri animation
-    hello_siri.currentTime = (scroll - (hello_siri.offsetTop - clientHeight * 2 / 3)) / 100
+    if (hello_siri != null) {
+        hello_siri.currentTime = (scroll - (hello_siri.offsetTop - clientHeight * 2 / 3)) / 100
+    }
 }
 
 function entryAnimations(scroll) {
@@ -126,10 +130,26 @@ function move() {
 }
 
 // Gestion vidéo
-var space_recognition_video_control, space_recognition_video
 window.onload = function() {
     loadSpaceRecognitionVideo()
+    loadHelloSiriVideo()
 };
+
+function loadHelloSiriVideo() {
+    let element = document.querySelector("#helloSiriVideo")
+    fetch("https://homepod.joshua.ovh/async/hello_siri.html")
+        .then(function(response) {
+            return response.text()
+        })
+        .then(function(responseHtml) {
+            element.innerHTML = responseHtml
+            hello_siri = body.querySelector('#hello_siri')
+            updateScrollPosition()
+        })
+        .catch(function(err) {
+            console.log('Failed to fetch page: ', err)
+        });
+}
 
 function loadSpaceRecognitionVideo() {
     let element = document.querySelector("#spaceRecognitionVideo")

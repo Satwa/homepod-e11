@@ -104,14 +104,14 @@
 }
 
 // Vidéo
+picture.fullSize img {
+  width: 100%;
+}
 video {
   width: 100%;
 }
 .video_container {
   position: relative;
-  picture img {
-    width: 100%;
-  }
   &__control {
     cursor: pointer;
     display: block;
