@@ -1,11 +1,11 @@
 const siriBlock = document.querySelector(".onSiri")
 let isAlreadyPlaying = false
 
-document.querySelector("#startRecognition").addEventListener("click", function(e){
+document.querySelector("#startRecognition").addEventListener("click", function(e) {
     e.preventDefault()
     this.parentNode.style.top = "-200%"
     this.parentNode.style.opacity = 0
-    setTimeout(function(){
+    setTimeout(function() {
         document.querySelector(".popupContainer").style.display = "none"
     }, 300)
 })
@@ -14,20 +14,20 @@ let playAudio = (name) => {
     let audio = document.querySelector("#audio-" + name)
     let play = audio.play()
 
-    play.then( () => {
+    play.then(() => {
         isAlreadyPlaying = true
         siriBlock.style.opacity = 1
-        if(annyang) annyang.pause()
+        if (annyang) annyang.pause()
     }).catch((err) => console.log("Error happened:", err))
 
     audio.addEventListener("ended", () => {
         isAlreadyPlaying = false
         siriBlock.style.opacity = 0
-        if(annyang) annyang.resume()
+        if (annyang) annyang.resume()
     })
 }
 
-if(annyang){
+if (annyang) {
     let tellMeAbout = (name) => { // In case we want to build a real assistant
         playAudio("mpuget")
         console.log(name)
@@ -42,20 +42,20 @@ if(annyang){
     }
 
     let commands = {
-        'dis siri': function(){
+        'dis siri': function() {
             playAudio("question")
         },
-        'bonjour': function(){ // DEBUG
+        'bonjour': function() { // DEBUG
             console.log("Bonjour")
             playAudio("question")
         },
-        '(dis siri) joue ma musique': function(){
+        '(dis siri) joue ma musique': function() {
             playAudio("music")
         },
-        '(dis siri) jouer ma musique': function(){
+        '(dis siri) jouer ma musique': function() {
             playAudio("music")
         },
-        '(dis siri) reprends ma musique': function(){
+        '(dis siri) reprends ma musique': function() {
             playAudio("music")
         },
         '(dis siri) joue le dernier épisode de *name': tellPodcast,
@@ -86,15 +86,17 @@ if(annyang){
         console.log(phrases)
     })
 
-    annyang.start({ autoRestart: true, continuous: false })
+    annyang.start({
+        autoRestart: true,
+        continuous: false
+    })
 }
 
 // Adding clickListener
 const questions = document.querySelectorAll(".siriGradient")
 questions.forEach((question) => {
     question.addEventListener("click", function(e) {
-        if(!isAlreadyPlaying){
-            // playAudio("question") // DEBUG
+        if (!isAlreadyPlaying) {
             playAudio(this.getAttribute("data-sentence"))
         }
     })

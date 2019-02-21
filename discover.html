@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <title>HomePod - Découvrir Siri - Apple (FR)</title>
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="assets/grid/materialize.min.css">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
+
 <body>
     <header id="header">
         <nav class="container">
@@ -55,8 +57,16 @@
         </div>
         <div class="row valign-wrapper h100">
             <div class="col s12 l6 device">
-                <img src="assets/images/homepod-w-siri.jpg" alt="Siri écoute" class="onSiri">
-                <img src="assets/images/homepod-without-siri.jpg" alt="HomePod">
+                <picture class="onSiri">
+                    <source srcset="assets/images/homepod-w-siri.webp" type="image/webp">
+                    <source srcset="assets/images/homepod-w-siri.jpg" type="image/jpeg">
+                    <img src="assets/images/homepod-w-siri.jpg" alt="Siri écoute">
+                </picture>
+                <picture>
+                    <source srcset="assets/images/homepod-without-siri.webp" type="image/webp">
+                    <source srcset="assets/images/homepod-without-siri.jpg" type="image/jpeg">
+                    <img src="assets/images/homepod-without-siri.jpg" alt="HomePod">
+                </picture>
             </div>
             <div class="col s12 l6 questions">
                 <h2>Que puis-je faire pour vous&nbsp;?</h2>
@@ -67,12 +77,12 @@
                 <h3 class="siriGradient" data-sentence="mpuget">Dis Siri, qui est Grégoire Puget&nbsp;?</h3>
 
                 <div class="audioSources">
-                    <audio id="audio-weather"  preload="auto" src="assets/audio/weather.mp3"></audio>
-                    <audio id="audio-music"    preload="auto" src="assets/audio/music.mp3"></audio>
-                    <audio id="audio-watusay"  preload="auto" src="assets/audio/watusay.mp3"></audio>
+                    <audio id="audio-weather" preload="auto" src="assets/audio/weather.mp3"></audio>
+                    <audio id="audio-music" preload="auto" src="assets/audio/music.mp3"></audio>
+                    <audio id="audio-watusay" preload="auto" src="assets/audio/watusay.mp3"></audio>
                     <audio id="audio-question" preload="auto" src="assets/audio/question.mp3"></audio>
-                    <audio id="audio-mpuget"   preload="auto" src="assets/audio/mpuget.mp3"></audio>
-                    <audio id="audio-parlonsdesign"  preload="auto" src="assets/audio/parlonsdesign.mp3"></audio>
+                    <audio id="audio-mpuget" preload="auto" src="assets/audio/mpuget.mp3"></audio>
+                    <audio id="audio-parlonsdesign" preload="auto" src="assets/audio/parlonsdesign.mp3"></audio>
                 </div>
             </div>
         </div>
@@ -130,7 +140,8 @@
         </nav>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <script src="assets/scripts/trySiri.js"></script>
-    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/trySiri.min.js"></script>
+    <script src="assets/scripts/main.min.js"></script>
 </body>
+
 </html>
