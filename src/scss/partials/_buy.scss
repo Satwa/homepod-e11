@@ -1,3 +1,11 @@
+.specialOffer::before {
+  content: " ";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background: url('../images/icons/gift.svg') no-repeat;
+}
 .colors{
     div{
         text-align: center;
