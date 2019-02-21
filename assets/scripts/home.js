@@ -136,19 +136,24 @@ window.onload = function() {
 };
 
 function loadHelloSiriVideo() {
-    let element = document.querySelector("#helloSiriVideo")
-    fetch("https://homepod.joshua.ovh/async/hello_siri.html")
-        .then(function(response) {
-            return response.text()
-        })
-        .then(function(responseHtml) {
-            element.innerHTML = responseHtml
-            hello_siri = body.querySelector('#hello_siri')
-            updateScrollPosition()
-        })
-        .catch(function(err) {
-            console.log('Failed to fetch page: ', err)
-        });
+    let isSafari = /constructor/i.test(window.HTMLElement) || (function(p) {
+        return p.toString() === "[object SafariRemoteNotification]";
+    })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))
+    if (isSafari) {
+        let element = document.querySelector("#helloSiriVideo")
+        fetch("https://homepod.joshua.ovh/async/hello_siri.html")
+            .then(function(response) {
+                return response.text()
+            })
+            .then(function(responseHtml) {
+                element.innerHTML = responseHtml
+                hello_siri = body.querySelector('#hello_siri')
+                updateScrollPosition()
+            })
+            .catch(function(err) {
+                console.log('Failed to fetch page: ', err)
+            });
+    }
 }
 
 function loadSpaceRecognitionVideo() {
