@@ -5,8 +5,6 @@ let video_already_played = false,
 const body = document.querySelector('body'),
     html = document.querySelector('html'),
     homepod_container = html.querySelector('.homepodContainer'),
-    space_recognition_video_control = html.querySelector('.video_container__control'),
-    space_recognition_video = html.querySelector('#space_recognition'),
     hello_siri = body.querySelector('#hello_siri'),
     at_home = body.querySelector('#at-home')
 
@@ -73,28 +71,6 @@ function getScrollPosition() {
     return scrollBody == 0 ? scrollHtml : scrollBody
 }
 
-// Gestion vidéo
-space_recognition_video.onPlay = playVideo()
-space_recognition_video.onended = pauseVideo
-
-space_recognition_video_control.addEventListener('click', function(e) {
-    e.preventDefault()
-    space_recognition_video.paused ? playVideo() : pauseVideo()
-})
-
-function playVideo() {
-    space_recognition_video.play()
-    if (!space_recognition_video.paused) {
-        space_recognition_video_control.classList.add('playing')
-    }
-}
-
-function pauseVideo() {
-    space_recognition_video.pause()
-    space_recognition_video_control.classList.remove('playing')
-}
-
-
 // Slider
 function setInfoCardWidth() {
     for (var i = 0; i < slides.length; i++) {
@@ -147,4 +123,45 @@ function move() {
             focused.classList.toggle('homepodContainer__homepodFocused')
         }
     }, 300)
+}
+
+// Gestion vidéo
+var space_recognition_video_control, space_recognition_video
+window.onload = function() {
+    loadSpaceRecognitionVideo()
+};
+
+function loadSpaceRecognitionVideo() {
+    let element = document.querySelector("#spaceRecognitionVideo")
+    fetch("https://homepod.joshua.ovh/async/space_recognition.html")
+        .then(function(response) {
+            return response.text()
+        })
+        .then(function(responseHtml) {
+            element.innerHTML = responseHtml
+            space_recognition_video_control = html.querySelector('.video_container__control')
+            space_recognition_video = html.querySelector('#space_recognition')
+
+            space_recognition_video.onPlay = playVideo()
+            space_recognition_video.onended = pauseVideo
+            space_recognition_video_control.addEventListener('click', function(e) {
+                e.preventDefault()
+                space_recognition_video.paused ? playVideo() : pauseVideo()
+            })
+        })
+        .catch(function(err) {
+            console.log('Failed to fetch page: ', err)
+        });
+}
+
+function playVideo() {
+    space_recognition_video.play()
+    if (!space_recognition_video.paused) {
+        space_recognition_video_control.classList.add('playing')
+    }
+}
+
+function pauseVideo() {
+    space_recognition_video.pause()
+    space_recognition_video_control.classList.remove('playing')
 }
