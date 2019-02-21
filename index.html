@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>HomePod - Présentation - Apple (FR)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <meta name="description" content="Avec un son extraordinaire, la perception spatiale et l’immense répertoire d’Apple Music, le HomePod réinvente l’enceinte.">
   <meta property="og:image" content="https://www.apple.com/v/homepod/h/images/meta/og.png?201902010151">
   <meta property="og:title" content="HomePod">
@@ -13,7 +13,7 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Apple (France)">
   <meta property="og:type" content="website">
-  
+
   <link rel="stylesheet" href="assets/grid/materialize.min.css">
   <link rel="stylesheet" href="assets/styles/main.css">
 </head>
@@ -44,13 +44,41 @@
         <h2>Il y a un nouveau son à la maison.</h2>
       </div>
       <div class="homepodContainer col s12 l5">
-        <img id="homepod-state-0" class="homepodContainer__homepodFocused" src="assets/images/guts/homepod_side_large.jpg" alt="Homepod speaker">
-        <img id="homepod-state-1" src="assets/images/guts/guts_4_large.jpg" alt="Homepod speaker">
-        <img id="homepod-state-2" src="assets/images/guts/guts_1_large.jpg" alt="Homepod speaker">
-        <img id="homepod-state-3" src="assets/images/guts/guts_2_large.jpg" alt="Homepod speaker">
-        <img id="homepod-state-4" src="assets/images/guts/guts_3_large.jpg" alt="Homepod speaker">
-        <img id="homepod-state-5" src="assets/images/guts/guts_4_large.jpg" alt="Homepod speaker">
-        <img id="homepod-state-6" src="assets/images/guts/homepod_side_large.jpg" alt="Homepod speaker">
+        <picture id="homepod-state-0" class="homepodContainer__homepodFocused" >
+          <source srcset="assets/images/guts/homepod_side_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/homepod_side_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/homepod_side_large.jpg" alt="Homepod speaker blanc">
+        </picture>
+        <picture id="homepod-state-1" >
+          <source srcset="assets/images/guts/guts_4_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/guts_4_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/guts_4_large.jpg" alt="Homepod speaker guts 4">
+        </picture>
+        <picture id="homepod-state-2" >
+          <source srcset="assets/images/guts/guts_1_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/guts_1_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/guts_1_large.jpg" alt="Homepod speaker huts 1">
+        </picture>
+        <picture id="homepod-state-3" >
+          <source srcset="assets/images/guts/guts_2_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/guts_2_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/guts_2_large.jpg" alt="Homepod speaker huts 2">
+        </picture>
+        <picture id="homepod-state-4" >
+          <source srcset="assets/images/guts/guts_3_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/guts_3_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/guts_3_large.jpg" alt="Homepod speaker huts 3">
+        </picture>
+        <picture id="homepod-state-5" >
+          <source srcset="assets/images/guts/guts_4_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/guts_4_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/guts_4_large.jpg" alt="Homepod speaker huts 4">
+        </picture>
+        <picture id="homepod-state-6" >
+          <source srcset="assets/images/guts/homepod_side_large.webp" type="image/webp">
+          <source srcset="assets/images/guts/homepod_side_large.jpg" type="image/jpeg">
+          <img src="assets/images/guts/homepod_side_large.jpg" alt="Homepod speaker blanc">
+        </picture>
       </div>
       <div class="col s12 l7">
         <div class="slider">
@@ -284,7 +312,7 @@
       </div>
     </nav>
   </footer>
-  
+
   <script src="assets/scripts/main.js"></script>
   <script src="assets/scripts/home.js"></script>
 </body>

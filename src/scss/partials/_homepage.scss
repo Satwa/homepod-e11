@@ -4,7 +4,7 @@
 .homepodContainer {
   position: relative;
   z-index: -1;
-  img {
+  picture img {
     position: absolute;
     top: 0;
     right: 0;
@@ -12,7 +12,7 @@
     opacity: 0;
     transition: opacity 0.3s linear;
   }
-  img.homepodContainer__homepodFocused {
+  picture.homepodContainer__homepodFocused img {
     opacity: 1;
   }
 }
@@ -179,7 +179,7 @@ h2.highlightText {
 
 // Media queries
 @media only screen and (min-width: 993px) {
-  .homepodContainer img {
+  .homepodContainer picture img {
     right: 50px;
   }
   .music_container {
