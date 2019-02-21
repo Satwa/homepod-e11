@@ -84,7 +84,7 @@
   left: -35vw;
   bottom: 0px;
   z-index: -1;
-  img {
+  picture img {
     width: 100px;
     height: 100px;
     opacity: 0;
@@ -92,13 +92,13 @@
     transform: translateX(25px);
     border-radius: 5px;
   }
-  img:nth-child(3n) {
+  picture:nth-child(3n) img {
     transition: all 0.3s;
   }
-  img:nth-child(3n+1) {
+  picture:nth-child(3n+1) img {
     transition: all 0.3s linear 0.15s;
   }
-  img:nth-child(3n+2) {
+  picture:nth-child(3n+2) img{
     transition: all 0.3s linear 0.30s;
   }
 }
