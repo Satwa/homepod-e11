@@ -119,10 +119,10 @@ video {
     bottom: 25px;
     right: 25px;
     z-index: 8;
-    background: url('../images/icons/play.svg') center 100% no-repeat;
+    background: url('../images/icons/play.svg') center no-repeat;
   }
   &__control.playing {
-    background: url('../images/icons/pause.svg') center 100% no-repeat;
+    background: url('../images/icons/pause.svg') center no-repeat;
   }
 }
 

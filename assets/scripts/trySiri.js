@@ -63,6 +63,7 @@ if(annyang){
         '(dis siri) reprend la lecture de *name': tellPodcast,
         '(dis siri) joue mon épisode de *name': tellPodcast,
         '(dis siri) quelle est la météo (du jour)': tellWeather,
+        '(dis siri) quel temps fait-il (aujourd\'hui)': tellWeather,
         '(dis siri) quelle est la météo (d\'aujourd\'hui)': tellWeather,
         '(dis siri) quelle est la météo (à *city)': tellWeather,
         '(dis siri) quelle est la météo (de *city)': tellWeather,
