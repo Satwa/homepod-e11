@@ -127,7 +127,10 @@
       <div class="row">
         <div class="video_container col s12">
           <a class="video_container__control" href="#" title="Jouer la vidéo sur la reconnaissance de l'espace"></a>
-          <video autoplay muted id="space_recognition" src="assets/movies/space_recognition.mp4">
+          <video autoplay muted id="space_recognition">
+            <source src="assets/movies/space_recognition.mp4" type="video/mp4" />
+            <source src="assets/movies/space_recognition.webm" type="video/webm" />
+            <source src="assets/movies/space_recognition.ogv" type="video/ogg" />
             Votre navigateur ne supporte pas l'élément vidéo
           </video>
         </div>
@@ -203,7 +206,11 @@
     <!-- Siri -->
     <section class="row">
       <div class="col s12 l6">
-        <video id="hello_siri" src="assets/movies/hello_siri.mov"></video>
+        <video id="hello_siri">
+          <source src="assets/movies/hello_siri.mp4" type="video/mp4" />
+          <source src="assets/movies/hello_siri.webm" type="video/webm" />
+          <source src="assets/movies/hello_siri.ogv" type="video/ogg" />
+        </video>
       </div>
       <div class="col s12 l6 entryAnim">
         <h2>Un coup de main&nbsp;? Un « Dis Siri », et c’est fait.</h2>
